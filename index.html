@@ -2,36 +2,123 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Vietnamese Baka</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>My Personal Blog</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;600&display=swap">
   <style>
+    :root {
+      --main-blue: #3b82f6;
+      --light-blue: #e0f2fe;
+      --text-dark: #1e3a8a;
+      --white: #ffffff;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
     body {
-      font-family: Arial, sans-serif;
-      background-color: #0d1117;
-      color: #c9d1d9;
-      text-align: center;
-      padding: 100px 20px;
+      font-family: 'Fredoka', sans-serif;
+      background-color: var(--light-blue);
+      color: var(--text-dark);
     }
-    h1 {
-      font-size: 3em;
-      color: #58a6ff;
+
+    header {
+      background-color: var(--main-blue);
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      color: var(--white);
     }
-    p {
-      font-size: 1.2em;
+
+    header h1 {
+      font-size: 1.8rem;
     }
-    a {
-      color: #8b949e;
+
+    nav a {
+      color: var(--white);
+      margin-left: 1.5rem;
       text-decoration: none;
+      font-weight: bold;
+      transition: color 0.3s;
     }
-    a:hover {
-      color: #58a6ff;
+
+    nav a:hover {
+      color: #bfdbfe;
+    }
+
+    main {
+      padding: 3rem 2rem;
+      max-width: 800px;
+      margin: auto;
+    }
+
+    .about {
+      background-color: var(--white);
+      padding: 2rem;
+      border-radius: 1.5rem;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+      text-align: center;
+    }
+
+    .about h2 {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+    }
+
+    .about p {
+      font-size: 1.1rem;
+      line-height: 1.6;
+      margin-bottom: 1.5rem;
+    }
+
+    .about img {
+      width: 180px;
+      border-radius: 50%;
+      margin: 1rem 0;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    }
+
+    iframe {
+      margin-top: 1rem;
+      border-radius: 12px;
+    }
+
+    footer {
+      margin-top: 3rem;
+      text-align: center;
+      font-size: 0.9rem;
+      color: #64748b;
     }
   </style>
 </head>
 <body>
-  <h1>🇻🇳 Vietnamese Baka</h1>
-  <p>Welcome to my GitHub Pages site!</p>
-  <p>More content coming soon...</p>
-  <p><a href="https://github.com/realOSAKER">Visit my GitHub</a></p>
+  <header>
+    <h1>My Roblox Blog</h1>
+    <nav>
+      <a href="/studio">Studio</a>
+      <a href="/contact">Contact</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="about">
+      <h2>Hi, I'm Vietnamese Baka!</h2>
+      <img src="avatar.png" alt="My Photo">
+      <p>I am a cybersecurity student.</p>
+      <p>I love to make games on Roblox, especially scripting!</p>
+      <img src="roblox.png" alt="Roblox Studio Screenshot">
+      <p>I also share tutorials on my YouTube channel.</p>
+      <p>Like my YouTube video below! 👇</p>
+      <iframe width="100%" height="315" src="https://www.youtube.com/embed/Ap9llly8iy8" title="YouTube video player" frameborder="0" allowfullscreen></iframe>
+    </section>
+  </main>
+
+  <footer>
+    © 2025 Vietnamese Baka. Built with ❤️ and Lua.
+  </footer>
 </body>
 </html>
