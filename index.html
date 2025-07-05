@@ -3,13 +3,14 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>My Personal Blog</title>
+  <title>My Blog</title>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;600&display=swap">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <style>
     :root {
       --main-blue: #3b82f6;
       --light-blue: #e0f2fe;
-      --text-dark: #1e3a8a;
+      --deep-blue: #1e40af;
       --white: #ffffff;
     }
 
@@ -21,8 +22,8 @@
 
     body {
       font-family: 'Fredoka', sans-serif;
-      background-color: var(--light-blue);
-      color: var(--text-dark);
+      background: linear-gradient(to bottom right, var(--light-blue), var(--white));
+      color: var(--deep-blue);
     }
 
     header {
@@ -32,6 +33,7 @@
       justify-content: space-between;
       align-items: center;
       color: var(--white);
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
     }
 
     header h1 {
@@ -52,73 +54,117 @@
 
     main {
       padding: 3rem 2rem;
-      max-width: 800px;
+      max-width: 900px;
       margin: auto;
     }
 
-    .about {
-      background-color: var(--white);
+    .hero {
+      text-align: center;
       padding: 2rem;
+      background-color: var(--white);
       border-radius: 1.5rem;
       box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-      text-align: center;
+      animation: fadeIn 1s ease-in;
     }
 
-    .about h2 {
-      font-size: 2rem;
-      margin-bottom: 1rem;
-    }
-
-    .about p {
-      font-size: 1.1rem;
-      line-height: 1.6;
-      margin-bottom: 1.5rem;
-    }
-
-    .about img {
-      width: 180px;
+    .hero img {
+      width: 160px;
       border-radius: 50%;
-      margin: 1rem 0;
+      margin-top: 1rem;
       box-shadow: 0 4px 10px rgba(0,0,0,0.2);
     }
 
-    iframe {
-      margin-top: 1rem;
-      border-radius: 12px;
+    .hero p {
+      font-size: 1.1rem;
+      margin-top: 1.2rem;
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2rem;
+      margin-top: 3rem;
+    }
+
+    .card {
+      background-color: var(--white);
+      padding: 1.5rem;
+      border-radius: 1.2rem;
+      text-align: center;
+      box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+      transition: transform 0.3s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+    }
+
+    .card img {
+      width: 100%;
+      border-radius: 1rem;
+      margin-bottom: 1rem;
+    }
+
+    .card iframe {
+      width: 100%;
+      border-radius: 1rem;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
     }
 
     footer {
-      margin-top: 3rem;
+      margin-top: 4rem;
       text-align: center;
       font-size: 0.9rem;
       color: #64748b;
+    }
+
+    @media (max-width: 768px) {
+      .cards {
+        grid-template-columns: 1fr;
+      }
     }
   </style>
 </head>
 <body>
   <header>
-    <h1>My Roblox Blog</h1>
+    <h1>Vietnamese Baka</h1>
     <nav>
+      <a href="index.html">About Me</a>
       <a href="/studio">Studio</a>
       <a href="/contact">Contact</a>
     </nav>
   </header>
 
   <main>
-    <section class="about">
-      <h2>Hi, I'm Vietnamese Baka!</h2>
-      <img src="avatar.png" alt="My Photo">
-      <p>I am a cybersecurity student.</p>
-      <p>I love to make games on Roblox, especially scripting!</p>
-      <img src="roblox.png" alt="Roblox Studio Screenshot">
-      <p>I also share tutorials on my YouTube channel.</p>
-      <p>Like my YouTube video below! 👇</p>
-      <iframe width="100%" height="315" src="https://www.youtube.com/embed/Ap9llly8iy8" title="YouTube video player" frameborder="0" allowfullscreen></iframe>
+    <section class="hero">
+      <h2>Hey there, I'm Vietnamese Baka!</h2>
+      <img src="avatar.png" alt="My Avatar">
+      <p>
+        I'm a cybersecurity student who finds joy in building immersive worlds and scripts in Roblox Studio.
+      </p>
+    </section>
+
+    <section class="cards">
+      <div class="card">
+        <img src="roblox.png" alt="Roblox Game Screenshot">
+        <p>Here's a peek at one of the Roblox games I've worked on. I love combining Lua scripts and creativity to make fun experiences!</p>
+      </div>
+      <div class="card">
+        <iframe height="215" src="https://www.youtube.com/embed/Ap9llly8iy8" title="YouTube Tutorial" frameborder="0" allowfullscreen></iframe>
+        <p>
+          I also run a YouTube channel where I help folks level up their dev skills with tutorials.
+          This is one of my YouTube tutorials - check it out if you're into scripting or game dev!
+        </p>
+      </div>
     </section>
   </main>
 
   <footer>
-    © 2025 Vietnamese Baka. Built with ❤️ and Lua.
+    © 2025 Vietnamese Baka. Built with ❤️ & Lua.
   </footer>
 </body>
 </html>
