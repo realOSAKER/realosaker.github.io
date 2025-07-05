@@ -12,6 +12,7 @@
       --light-blue: #e0f2fe;
       --deep-blue: #1e40af;
       --white: #ffffff;
+      --gradient-blue: linear-gradient(to right, #60a5fa, #3b82f6, #2563eb);
     }
 
     * {
@@ -27,29 +28,44 @@
     }
 
     header {
-      background-color: var(--main-blue);
-      padding: 1rem 2rem;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
+      background: var(--gradient-blue);
+      padding: 2rem;
+      text-align: center;
       color: var(--white);
-      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+      position: relative;
     }
 
     header h1 {
-      font-size: 1.8rem;
+      font-size: 2.5rem;
+      margin-bottom: 0.5rem;
+      animation: floatIn 0.9s ease-out;
+    }
+
+    header p {
+      font-size: 1.2rem;
+      margin-bottom: 1.2rem;
+      opacity: 0.9;
+    }
+
+    nav {
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      flex-wrap: wrap;
     }
 
     nav a {
       color: var(--white);
-      margin-left: 1.5rem;
       text-decoration: none;
       font-weight: bold;
-      transition: color 0.3s;
+      padding: 0.5rem 1rem;
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.15);
+      transition: all 0.3s ease;
     }
 
     nav a:hover {
-      color: #bfdbfe;
+      background: rgba(255, 255, 255, 0.3);
     }
 
     main {
@@ -115,6 +131,11 @@
       to { opacity: 1; transform: translateY(0); }
     }
 
+    @keyframes floatIn {
+      from { opacity: 0; transform: translateY(-20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
     footer {
       margin-top: 4rem;
       text-align: center;
@@ -132,6 +153,7 @@
 <body>
   <header>
     <h1>Vietnamese Baka</h1>
+    <p>Cybersecurity nerd & Roblox scripter — building worlds, teaching code 🧠🎮</p>
     <nav>
       <a href="index.html">About Me</a>
       <a href="/studio">Studio</a>
